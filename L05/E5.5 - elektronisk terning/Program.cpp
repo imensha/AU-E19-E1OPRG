@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
         // Roll die until key P1 is pressed
         while (!keyPressed(1))
         {
-            int currentThrow = rand() % (DIE_MAX + DIE_MIN);
+            int currentThrow = (rand() % DIE_MAX) + DIE_MIN;
             ledOff(previousThrow);
             Wait(10);
             ledOn(currentThrow);
